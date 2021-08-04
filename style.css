@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+
+}
+
+html {
+    font-size: 90%;
+}
+
+body {
+    padding: 2rem 7%;
+}
+
+section {
+    padding: 2rem 2%;
+}
+
+.hamburger {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .logo{
+    margin-top: .5rem;
+    width: 105%;
+
+}
+
+.header .navbar {
+    display: flex;
+   
+    right: 2rem;
+}
+
+.header .navbar ul {
+    list-style: none;
+    display: flex;
+   
+
+}
+
+.header .navbar ul li a {
+    display: flex;
+    padding-right: 1rem;
+    color: black;
+    margin-top: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.header .button {
+    padding: 12px 15px;
+    background-color: orange;
+    border-radius: .5rem;
+   
+}
+
+.header .button .btn {
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+
+}
+
+.main-hero {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+
+}
+
+.main-hero .image {
+    flex: 1 1 20rem;
+}
+
+.main-hero .image img {
+    width: 100%;
+
+}
+
+.main-hero .text {
+    flex: 1 1 40rem;
+}
+
+.main-hero .text h2 {
+    font-size: 2.5rem;
+}
+
+.main-hero .text p {
+    color: grey;
+    font-size: 1rem;
+    padding: .5rem 0;
+    line-height: 2;
+
+}
+
+.main-hero .user {
+    display: flex;
+    padding-top: 1rem;
+}
+
+.main-hero .user img {
+    width: 6rem;
+}
+
+.main-hero .user span {
+    padding: 1rem 1.3rem;
+    font-size: 1.1rem;
+}
+
+.articles {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: 2rem;
+}
+
+.user-article h2 {
+    font-size: 2.5rem;
+   
+}
+
+.user-article p {
+    color: grey;
+    font-size: 1rem;
+    padding: 1rem 0;
+}
+
+.user-article .image img {
+    width: 100%;
+}
+
+.user-article .user {
+    display: flex;
+    padding-top: 1rem;
+}
+
+.user-article .user img {
+    width: 6rem;
+}
+
+.user-article .user span {
+    padding: 1rem 1.3rem;
+    font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+
+    body {
+        padding: 1rem;
+    }
+
+    .hamburger {
+        position: absolute;
+        display: block;
+        right: 30px;
+        top: 20px;
+        
+        cursor: pointer;
+    }
+
+    .header .navbar ul{
+        display:block;
+        left: 0;
+    }
+
+    .header .navbar {
+        display: flex;
+        position: absolute;
+        background: rgb(165, 38, 38);
+        
+        left: 50%;
+        right: 0;
+        top: 50px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+        
+        
+    }
+
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+    }
+
+    .header .navbar ul li a {
+        color: white;
+        font-size: 2rem;
+        align-self: center;
+        padding: 0 2rem;
+    }
+
+    .header .navbar ul li a:hover {
+        color: black;
+    }
+
+    .header .button {
+        display: none;
+    }
+
+
+
+    html {
+        font-size: 60%;
+    }
+
+
+    .main-hero {
+        gap: 1rem;
+    }
+
+    .articles {
+        grid-template-columns: 1fr;
+    }
+}
